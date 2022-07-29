@@ -655,19 +655,12 @@ color:black
 }
 
 .Login-form button{
-    
-    
-    margin: 20px 0;
-    
-    width: 50%;
-    
-
-
+    margin-top: 1rem;
     display: inline-block;
     padding:.8rem 3rem;
     font-size: 1.7rem;
     border-radius: .5rem;
-    background: rgb(32, 18, 149);
+    background: #666;
     color:#fff;
     cursor: pointer;
     font-weight: 600;
