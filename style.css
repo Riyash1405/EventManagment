@@ -665,3 +665,8 @@ color:black
     cursor: pointer;
     font-weight: 600;
 }
+
+
+.Login-form button:hover{
+    background:var(--main-color);
+}
