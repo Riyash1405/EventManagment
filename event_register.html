@@ -1,56 +1,122 @@
-<head>
-    
-    
-</head>  
-    <title>Event Registration Page</title>
+<!DOCTYPE html>
+<html>
 
-<div class="box">
-    <div class="form-box">
-        <h1>Event Registration</h1>
-      
-        
-       
-        
-      
-        <form class="myForm" action="/event_register" method="post">
-          
-            <div class="form-group">
-                <label for="name">Event Name</label>
-                <input type="text" class="form-control" name="name" id="name" required>
-            </div>
-            <div class="form-group">
-                <label for="desc">Description</label>
-                <input type="text" class="form-control" name="desc" id="description" required>
-            </div>
-                       
-            <div class="form-group">
-                <label for="from_date">From</label>    
-                <input type="datetime-local" class="form-control" name="from_date" id="from_date" required>            
-            </div>            
-            <div class="form-group">
-                <label for="to_date">To</label>    
-                <input type="datetime-local" class="form-control" name="to_date" id="to_date" required>            
-            </div>            
-            <div class="form-group line-form-group" >
-                <label for="deadline">Deadline</label>    
-                <input type="datetime-local" class="form-control" name="deadline" id="deadline" required>            
-            </div>            
-            <div class="form-group">
-                <label for="host_email">Host Username</label>    
-                <input type="text" class="form-control" name="Username" id="Username" required>            
-            </div>            
-            <div class="form-group">
-                <label for="password">Password</label>    
-                <input type="password" class="form-control" name="password" id="password" required>                 
-            </div>
-            <div class="form-group">
-                <a href="index.html">Back</a>                
-            </div>
-            <div class="form-group submit-btn">                
-                <button type="submit" class="btn btn-primary">Submit</button>      
-            </div>
-      
-        </form>
-    </div>
+<head>
+  <title>Event Registration Form.</title>
+
+
+ <style>
+    body {
+    font-family: "Raleway", sans-serif;
+    background-color: blue;
+  }
+  h1 {
+    text-align: center;
+    margin: 20px auto;
+  }
+  form {
+    width: 70%;
+    margin: auto;
+  }
+  fieldset {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 0 5px #333;
+    background-color: #eee;
+  }
+  label {
+    display: block;
     
-</div>
+    margin-bottom: 5px;
+  }
+  input[type="text"],input[type="password"],input[type="number"],input[type="email"],input[type="tel"],input[type="date"],select{
+    width: calc(100% - 20px);
+    height: 27px;
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  button {
+    width: 100%;
+    text-align: center;
+    margin: auto !important;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #eee;
+  }
+  
+ </style>
+      
+</head>
+
+<body>
+    <div id="event-registration">
+        <h1>Event Registration</h1>
+        <form id="event--registration-form" method="POST" action="regis.php">
+            
+            <!-- Form contents will go here -->
+          <fieldset>
+            <h3>Personal Information</h3>
+            <label for="username">username</label>
+            <input type="text" id="username" name="username"required />
+           
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name"required />
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" required/>
+            <label for="phone">Enter your phone number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required/>
+            
+            
+            <label for="Event">Type of Event</label>
+            <select id="Event" name="Event" required>
+                <option>-- Choose your Event Type --</option>
+                <option value="Wedding">Wedding</option>
+                <option value="Birthday Party">Birthday Party</option>
+                <option value="cocert">Concert</option>
+                <option value="Businee event">Business Event</option>
+                <option value="treditional event">Treditional Event</option>
+                <option value="other">Other</option>
+              </select>
+              <label for="Food">Type of Food</label>
+              <select id="Food" name="Food" required>
+                <option>-- Choose Type food--</option>
+                <option value="Veg">Pure Veg.</option>
+                <option value="Non veg">Non veg.</option>
+                <option value="Both">Both</option>
+              </select>
+              <label for="Drinks">Type of Drinks</label>
+              <select id="Drinks" name="Drinks" required>
+                <option>-- Choose Type Drinks--</option>
+                <option value="cocktail">cocktail</option>
+                <option value="mocktail">mocktail</option>
+                <option value="Both">Both</option>
+                <option value="None">None</option>
+              </select>
+              <label for="Participents">No of People Attends Event </label>
+              <input type="number" id="atendees" name="atendees" required/>
+              <label for="Date">Date of Event </label>
+              <input type="date" id="date" name="date" required/>
+
+            <label for="street">Address of Event</label>
+            <input type="text" id="address" name="address" required/>
+         
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required/>
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" required/>
+           
+          </fieldset>
+         
+          </fieldset>
+          <button type="submit" value="submit" name="submit1">Submit Form</button>
+      </div>
+</body>
+
+</html>
