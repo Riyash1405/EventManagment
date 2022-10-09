@@ -2,7 +2,7 @@
  
     
  $con= mysqli_connect("localhost","root","","event");
-    if(isset($_POST['submit1'])){
+    if($_POST['submit1']){
        if(!empty($_POST['username']) && !empty($_POST['first-name']) && !empty($_POST['last-name']) && !empty($_POST['phone']) && !empty($_POST['email']) && !empty($_POST['Event']) && !empty($_POST['Food']) && !empty($_POST['Drinks']) && !empty($_POST['atendees']) && !empty($_POST['date']) && !empty($_POST['address']) && !empty($_POST['city']) && !empty($_POST['state']))
           {
                 $username = $_POST['username'];  
@@ -19,7 +19,7 @@
                 $city = $_POST['city']; 
                 $state = $_POST['state'];
 
-                $query1="INSERT INTO event('username', 'fname', 'lname', 'mob', 'email', 'type of event', 'food', 'drinks', 'no of people', 'date', 'address', 'city', 'state') VALUES ('$username','$fname','$lname',$mob,'$email','$event','$food','$drinks',$noOfPeople,$date,'$address','$city','$state')";
+                $query1="INSERT INTO event VALUES ('$username','$fname','$lname',$mob,'$email','$event','$food','$drinks',$noOfPeople,$date,'$address','$city','$state')";
                 $run= mysqli_query ( $con , $query1 )  or die (mysqli_error($con));
 
                 if($run){
