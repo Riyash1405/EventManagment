@@ -7,7 +7,7 @@
             die("Failed to connect: ".$con->connect_error);
         }
         else{
-            $stmt=$con->prepare("select * from login where username= ?");
+            $stmt=$con->prepare("select * from users where username= ?");
             $stmt->bind_param("s",$username);
             $stmt->execute();
             $stmt_result=$stmt->get_result();
@@ -21,11 +21,3 @@
                 }
             }
         }
-          
-      //  if($count >0){  
-       //     echo "<h1><center> Login successful </center></h1>";  
-       // }  
-       // else{  
-       //     echo "<h1> Login failed. Invalid username or password.</h1>";  
-       // }     
-?>  
