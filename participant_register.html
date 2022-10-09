@@ -1,70 +1,88 @@
+<!DOCTYPE html>
+<html>
+
 <head>
-   
-</head>
-<title>Particpant Participation Page</title>
+  <title>Event Registration Form.</title>
 
 
+ <style>
+    body {
+    font-family: "Raleway", sans-serif;
+    background-color: blue;
+  }
+  h1 {
+    text-align: center;
+    margin: 20px auto;
+  }
+  form {
+    width: 70%;
+    margin: auto;
+  }
+  fieldset {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 0 5px #333;
+    background-color: #eee;
+  }
+  label {
+    display: block;
+    
+    margin-bottom: 5px;
+  }
+  input[type="text"],input[type="password"],select{
+    width: calc(100% - 20px);
+    height: 20px;
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  button {
+    width: 100%;
+    text-align: center;
+    margin: auto !important;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #eee;
+  }
   
-    <div class="form-box">
-        <h1>Participation Page</h1>
-       
-        
-        <form class="myForm" action="/participant_register" method="post">
-        
-            <div class="form-group">
-                <label for="first_name">First Name</label>
-                <input type="text" class="form-control" name="first_name" id="first_name" required>
-            </div>
-            <div class="form-group">
-                <label for="last_name">last Name</label>
-                <input type="text" class="form-control" name="last_name" id="last_name" required>
-            </div>
-            <div class="form-group">
-                <label for="contact_no">Contact No</label>
-                <input type="text" class="form-control" name="contact_no" id="contact_no" maxlength="10" required>
-            </div>
-            <div class="form-group">
-                <label for="participant_email">Email</label>
-                <input type="email" class="form-control" name="participant_email" id="participant_email" required>
-            </div>
-            <div class="form-group">
-                <lable>Select City For Event</lable>
-                <select name="city">
-                    <option value="Default">Select City</option>
-                    <option value="rajkot">RAJKOT</option>
-                    <option value="surat">SURAT</option>
-                    <option value="ahmedabad">AHMEDABAD</option>
-                    <option value="jamnagar">JAMNAGAR</option>
-                    <option value="junagadh">Junagadh</option>
-                    <option value="rajkot">VADODARA</option>
-                    <option value="rajkot">MAHESANA</option>
-                    <option value="rajkot">UNJHA</option>
-                
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="address">Current Address</label>
-                <input type="text" class="form-control" name="address" id="address" required>
-            </div>
-       <!--     <div class="form-group">
-                <label for="event-address">Address of Partplot/Hall</label>
-                <input type="text" class="form-control" name="event-address" id="event-address" required>
-            </div>
+ </style>
+      
+</head>
+
+<body>
+    <div id="event-registration">
+        <h1>Sign UP</h1>
+        <form id="event-registration-form" method="POST" action="">
             
-           
-           
-            <div class="form-group line-form-group" id="number-ppl">
-                <label for="no_of_people">No of People Attend An Event</label>
-                <input type="number" class="form-control" name="no_of_people" id="no_of_people" value="1" min="1">
-            </div> -->                        
-            <div class="form-group">
-                <a href="index.html">Back</a>                
-            </div>
-            <div class="form-group submit-btn">                
-                <button type="submit" class="btn btn-primary">Submit</button>      
-            </div>
+            <!-- Form contents will go here -->
+          <fieldset>
+            <h3>Personal Information</h3>
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" />
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" />
+            <label for="text">Username</label>
+            <input type="text" id="username" name="username" />
+            <label for="password">Password</label>
+            <input type="password" name="password" placeholder="Password" required>
+            <label for="street">Address</label>
+            <input type="text" id="street" name="street" />
+            <label for="unit">Unit</label>
+            <input type="text" id="unit" name="unit" />
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" />
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" />
+            <label for="postal-code">Postal Code</label>
+            <input type="text" id="postal-code" name="postal-code" />
+          </fieldset>
+         
+          </fieldset>
+          <button type="submit">Submit Form</button>
+      </div>
+</body>
 
-        </form>    
-
-    </div>
-</div>
+</html>
