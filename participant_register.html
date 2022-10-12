@@ -2,16 +2,36 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Event Organizer Website Design Tutorial</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+
   <title>Sign Up Form</title>
 
 
  <style>
     body {
     font-family: "Raleway", sans-serif;
-    background-color: blue;
+    background-color:#444;
   }
-  h1 , h4{
+  h1 {
+    text-align: center;
+    margin: 20px auto;
+    color:#3867d6;
+  }
+  h3 {
     text-align: center;
     margin: 20px auto;
   }
@@ -29,7 +49,7 @@
   }
   label {
     display: block;
-    
+    size: 40px;
     margin-bottom: 5px;
   }
   input[type="text"],input[type="password"],select{
@@ -49,18 +69,123 @@
     background-color: #eee;
   }
   
+  .header{
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 10000;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1.5rem 9%;
+}
+
+.header .logo{
+    font-weight: bolder;
+    color:#fff;
+    font-size: 2.5rem;
+}
+
+.header .logo span{
+    color:#3867d6;
+}
+
+.header .navbar a{
+    font-size: 1.5rem;
+    color:#fff;
+    margin-left: 2rem;
+}
+
+.header .navbar a:hover{
+    color:#3867d6;
+}
+
+
+.footer{
+    background:#111;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    padding:1rem 0;
+    color:#fff;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    padding:1rem 0;
+    color:#eee;
+}
+
+.footer .box-container .box a i{
+    padding-right: .5rem;
+    color:var(--main-color);
+}
+
+.footer .box-container .box a:hover i{
+    padding-right: 1.5rem;
+    color:#fff;
+}
+
+.footer .credit{
+    text-align: center;
+    border-top: .1rem solid #222;
+    color:#fff;
+    padding:2rem;
+    padding-top: 2.5rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.footer .credit span{
+    color:var(--main-color);
+}
+
  </style>
       
 </head>
 
 <body>
-    <div id="event-registration">
+  
+<header class="header">
+  <a href="#" class="logo"><span>MR</span>evento</a>
+
+  <nav class="navbar">
+      <a href="index.html">home</a>
+      <a href="index.html">service</a>
+      <a href="index.html">about</a>
+      <a href="index.html">gallery</a>
+      <a href="index.html">price</a>
+      <a href="index.html">review</a>
+      <a href="index.html">contact</a>
+     
+  </nav>
+
+  <div id="menu-bars" class="fas fa-bars"></div>
+
+</header>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+
+
+
+<div id="event-registration">
         <h1>Sign UP</h1>
         <form id="event-registration-form" method="POST" action="dbconnection.php">
             
             <!-- Form contents will go here -->
           <fieldset>
-            <h3>Personal Information</h3>
+            <h2>Personal Information</h2>
           
             <label for="text">Username</label>
             <input type="text" id="username" name="username" placeholder="username" required />
@@ -68,12 +193,68 @@
             <input type="password" name="password" placeholder="Password" required>
             <label for="cpassword">Repeat Password</label>
             <input type="password" placeholder="Repeat Password" name="cpassword" required>
-            <h4>already have an account <a href="login.html">Login here</a></h4>
+            <h3>already have an account <a href="login.html">Login here</a></h3>
           </fieldset>
          
           </fieldset>
           <button type="submit" name="register" value="register">Sign Up</button>
       </div>
+<br>
+<br>
+<!-- footer section starts  -->
+
+<section class="footer">
+
+  <div class="box-container">
+
+      <div class="box">
+          <h3>branches</h3>
+          <a href="#"> <i class="fas fa-map-marker-alt"></i> Ahmedabad </a>
+          <a href="#"> <i class="fas fa-map-marker-alt"></i> Surat </a>
+          <a href="#"> <i class="fas fa-map-marker-alt"></i> Unjha </a>
+          <a href="#"> <i class="fas fa-map-marker-alt"></i> Dhangdhra </a>
+          <a href="#"> <i class="fas fa-map-marker-alt"></i> Valsad</a>
+      </div>
+
+      <div class="box">
+        <h3>quick links</h3>
+        <a href="index.html"> <i class="fas fa-arrow-right"></i> home </a>
+        <a href="index.html"> <i class="fas fa-arrow-right"></i> service </a>
+        <a href="index.html"> <i class="fas fa-arrow-right"></i> about </a>
+        <a href="index.html"> <i class="fas fa-arrow-right"></i> gallery </a>
+        <a href="index.html"> <i class="fas fa-arrow-right"></i> price </a>
+        <a href="index.html"> <i class="fas fa-arrow-right"></i> review </a>
+        <a href="index.html"> <i class="fas fa-arrow-right"></i> contact </a>
+       
+    
+    </div>
+
+      <div class="box">
+          <h3>contact info</h3>
+          <a href="tel:8160094330"> <i class="fas fa-phone"></i> +91-8160094330 </a>
+          <a href="tel:9913548779"> <i class="fas fa-phone"></i> +91-9913548779</a>
+          <a href="mailto:patelriyash.20.cs@iite.indusuni.ac.in"> <i class="fas fa-envelope"></i> patelriyash.20.cs@iite.indusuni.ac.in </a>
+          <a href="mailto:mokshakothari.20.cs@iite.indusuni.ac.in"> <i class="fas fa-envelope"></i>mokshakothari.20.cs@iite.indusuni.ac.in</a>
+          <a href="#"> <i class="fas fa-map-marker-alt"></i> Ahmedabad, india -382480 </a>
+      </div>
+
+      <div class="box">
+          <h3>follow us</h3>
+          <a href="https://www.facebook.com/riyash.patel.39"> <i class="fab fa-facebook-f"></i> facebook </a>
+          <a href="https://twitter.com/RPatel1405?t=lT6wZTN9smqbpEZQhtrwxQ&s=09"> <i class="fab fa-twitter"></i> twitter </a>
+          <a href="https://www.instagram.com/invites/contact/?i=zmnpz6vm3nmv&utm_content=3jtpi3q"> <i class="fab fa-instagram"></i> instagram </a>
+          <a href="https://www.linkedin.com/in/riyash-patel-03730b201"> <i class="fab fa-linkedin"></i> linkedin </a>
+      </div>
+
+  </div>
+
+  <div class="credit"> created by <span>Moksha Kothari & Riyash Patel</span> | &copy all rights reserved </div>
+
+</section>
+
+
+
+
 </form>
 </body>
 
