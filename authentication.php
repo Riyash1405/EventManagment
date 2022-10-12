@@ -14,10 +14,18 @@
             if($stmt_result->num_rows>0){
                 $data=$stmt_result->fetch_assoc();
                 if($data['password']=== $password){
-                    echo "<h2>Login successfully</h2>";
+                    header('Location:loggedIn.html');
                 }
                 else{
                     echo "<h2>Invalid username or password</h2>";
                 }
             }
         }
+          
+      //  if($count >0){  
+       //     echo "<h1><center> Login successful </center></h1>";  
+       // }  
+       // else{  
+       //     echo "<h1> Login failed. Invalid username or password.</h1>";  
+       // }     
+?>  
