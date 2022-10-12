@@ -20,11 +20,18 @@
    
    if($data)
    {
-     echo "data inserted into database";
+     header('Location:login.html');
    }
    else{
      echo "failed";
    }
    
    }
+//	if($conn) {
+//		echo "success";
+//	}
+//	else {
+//		die("Error". mysqli_connect_error());
+//	}
+
    
