@@ -462,7 +462,7 @@
 <!-- footer section ends -->
 
 <!-- theme toggler  -->
-<!--
+
 <div class="theme-toggler">
 
     <div class="toggle-btn">
@@ -481,7 +481,7 @@
     </div>
 
 </div>
--->
+
 
 
 
