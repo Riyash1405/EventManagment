@@ -1,8 +1,10 @@
 <?php      
      
-    $username = $_POST['username'];  
+    $username = $_POST['username'];
     $password = $_POST['password'];  
       $con= new mysqli("localhost","root","","login");
+      
+
         if($con->connect_error){
             die("Failed to connect: ".$con->connect_error);
         }
@@ -14,7 +16,14 @@
             if($stmt_result->num_rows>0){
                 $data=$stmt_result->fetch_assoc();
                 if($data['password']=== $password){
-                    header('Location:loggedIn.html');
+                    $q1="DELETE FROM `cuser` ";
+                    $x1=mysqli_query($con,$q1);
+
+                    $q="INSERT INTO `cuser`(`uname1`) VALUES ('$username')";
+                    $x=mysqli_query($con,$q);
+
+
+                    header('Location:loggedIn.php');
                 }
                 else{
                     echo "<h2>Invalid username or password</h2>";
